@@ -1,0 +1,23 @@
+{
+  "name": "@oriun/hookster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oriun/hookster.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Oriun/hookster/issues"
+  },
+  "homepage": "https://github.com/Oriun/hookster#readme",
+  "description": ""
+}
