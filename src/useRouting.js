@@ -4,7 +4,7 @@ window.hooksterHistory = {}
 window.hooksterHistory.push = (location, state, title) => {
     window.history.pushState(state, title, location)
     document.title !== title && (document.title = title)
-    window.hooksterHistory.listener.forEach(a => a?.(location))
+    window.hooksterHistory.listener.forEach(a => a(location))
 }
 window.hooksterHistory.listener = []
 window.hooksterHistory.listen = listener => typeof listener === 'function' && (i => () => delete window.hooksterHistory.listener[i])(window.hooksterHistory.listener.push(listener))

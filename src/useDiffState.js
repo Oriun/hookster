@@ -29,7 +29,6 @@ const ObjectDiff = (obj, diffs, deleteUndefined = false) => {
  * @author Emmanuel Nuiro
  */
 const useDiffState = initState => {
-    console.log('yo')
     const [state, setState] = useState(initState)
     return [
         state,
