@@ -1,6 +1,7 @@
 const { useState } = require("react")
 const useWEvent = require('./useWEvent')
 
+/** NOT RECOMMENDED NOR SUITABLE FOR PROJECT THAT NEED PERFORMANCES */
 
 const upgradeStorage = (key, storage, emit) => {
     storage.__proto__.oldSet = storage.setItem

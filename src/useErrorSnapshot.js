@@ -1,6 +1,8 @@
-const React = require('react')
+const { useRef, useState } = require('react')
 
-const useErrorSnapshot = ()=>{
+const useErrorSnapshot = ({
+    mode
+}) => {
 
 }
 

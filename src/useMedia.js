@@ -1,4 +1,4 @@
-const { useState, useEffect } = require('react')
+const { useState, useEffect, useRef } = require('react')
 
 const translateToPixel = string => {
     // NOW => only handle pixels value
@@ -12,10 +12,10 @@ const isTrue = (mediaquery, element) => {
     const [type, value] = mediaquery.split(/ *: */)
     const pixels = translateToPixel(value)
     switch (type) {
-        case 'max-width': return element.width <= pixels
-        case 'min-width': return element.width >= pixels
-        case 'max-height': return element.height <= pixels
-        case 'min-height': return element.height >= pixels
+        case 'max-width': return element.inlineSize <= pixels
+        case 'min-width': return element.inlineSize >= pixels
+        case 'max-height': return element.blockSize <= pixels
+        case 'min-height': return element.blockSize >= pixels
         default: return false
     }
 }
@@ -24,25 +24,22 @@ const isTrue = (mediaquery, element) => {
  * 
  * @param {Object<string, string>} queries 
  * @param {HTMLElement | Node} element 
- * @returns {[Object<string, boolean>, ()=>void]}
+ * @returns {Object<string, boolean>}
  */
 const useMedia = (queries, element) => {
     const [execQueries, setExecQueries] = useState(queries)
-    const [el, setEl] = useState(element || document.querySelector('#root'))
-    const [funcs, setfuncs] = useState([() => { }, () => { }])
-
-    useEffect(() => element && setEl(element), [element])
+    const [el, setEl] = useState(element === undefined ? document.querySelector('#root') : null)
+    useEffect(() => !el && setEl(element()), [])
     useEffect(() => {
+        if (!el) return
         let obs = new ResizeObserver(([observed]) => {
-            const processed = Object.fromEntries(Object.entries(queries).map(([name, mediaquery]) => ([name, isTrue(mediaquery, observed.contentRect)])))
-            processed != execQueries && setExecQueries(processed)
+            const processed = Object.fromEntries(Object.entries(queries).map(([name, mediaquery]) => ([name, isTrue(mediaquery, observed.borderBoxSize)])))
+            Object.entries(processed).map(a => execQueries[a[0]] === a[1]).includes(false) && setExecQueries(processed)
         })
-        obs.observe(el)
-        const stopObserving = () => obs.unobserve(el)
-        setfuncs([stopObserving, () => obs.observe(el)])
-        return stopObserving
-    }, [el])
-    return [execQueries, funcs[0], funcs[1]]
+        el && obs.observe(el)
+        return () => obs.disconnect(obs.observe(el))
+    }, [el, execQueries])
+    return execQueries
 }
 
 
