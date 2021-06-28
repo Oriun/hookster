@@ -27,7 +27,7 @@ const isTrue = (mediaquery, element) => {
  * @returns {Object<string, boolean>}
  */
 const useMedia = (queries, element) => {
-    const [execQueries, setExecQueries] = useState(queries)
+    const [execQueries, setExecQueries] = useState(Object.fromEntries(Object.entries(queries).map(a => [a[0], null])))
     const [el, setEl] = useState(element === undefined ? document.querySelector('#root') : null)
     useEffect(() => !el && setEl(element()), [])
     useEffect(() => {
