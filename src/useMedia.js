@@ -26,20 +26,19 @@ const isTrue = (mediaquery, element) => {
  * @param {HTMLElement | Node} element 
  * @returns {Object<string, boolean>}
  */
-const useMedia = (queries, element) => {
-    const [execQueries, setExecQueries] = useState(Object.fromEntries(Object.entries(queries).map(a => [a[0], null])))
-    const [el, setEl] = useState(element === undefined ? document.querySelector('html') : null)
-    useEffect(() => !el && setEl(element()), [])
+const useMedia = (queries) => {
+    const [execQueries, setExecQueries] = useState(queries)
+    const ref = useRef(null)
     useEffect(() => {
-        if (!el) return
+        if (!ref.current) return
         let obs = new ResizeObserver(([observed]) => {
             const processed = Object.fromEntries(Object.entries(queries).map(([name, mediaquery]) => ([name, isTrue(mediaquery, observed.borderBoxSize)])))
             Object.entries(processed).map(a => execQueries[a[0]] === a[1]).includes(false) && setExecQueries(processed)
         })
-        el && obs.observe(el)
-        return () => obs.disconnect(obs.observe(el))
-    }, [el, execQueries])
-    return execQueries
+        ref.current && obs.observe(ref.current)
+        return () => obs.disconnect(obs.observe(ref.current))
+    }, [ref.current, execQueries])
+    return [execQueries, ref]
 }
 
 
