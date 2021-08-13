@@ -31,8 +31,8 @@ const useMedia = (queries) => {
     const ref = useRef(null)
     useEffect(() => {
         if (!ref.current) return
-        let obs = new ResizeObserver(([observed]) => {
-            const processed = Object.fromEntries(Object.entries(queries).map(([name, mediaquery]) => ([name, isTrue(mediaquery, observed.borderBoxSize)])))
+        let obs = new ResizeObserver(([{ borderBoxSize }]) => {
+            const processed = Object.fromEntries(Object.entries(queries).map(([name, mediaquery]) => ([name, isTrue(mediaquery, borderBoxSize[0] || borderBoxSize)])))
             Object.entries(processed).map(a => execQueries[a[0]] === a[1]).includes(false) && setExecQueries(processed)
         })
         ref.current && obs.observe(ref.current)
