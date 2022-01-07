@@ -1,0 +1,74 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Emmanuel Nuiro\bin;C:\Python310\Scripts;C:\Python310;C:\Program Files (x86)\VMware\VMware Workstation\bin;C:\Python39\Scripts;C:\Python39;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Gradle\gradle-6.7.1\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\CMake\bin;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Emmanuel Nuiro\AppData\Local\Microsoft\WindowsApps;C:\Users\Emmanuel Nuiro\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Emmanuel Nuiro\AppData\Local\GitHubDesktop\bin;C:\Users\Emmanuel Nuiro\AppData\Local\Yarn\bin;C:\Program Files (x86)\BrowserStackLocal;C:\tools\neovim\Neovim\bin;C:\Users\Emmanuel Nuiro\AppData\Roaming\npm;C:\Users\Emmanuel Nuiro\AppData\Local\nvs
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  17.0.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@oriun%2fuse-error-snapshot: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141721:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141643:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1340:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "@oriun/hookster",
+    "version": "1.0.11",
+    "main": "index.js",
+    "license": "MIT",
+    "type": "module",
+    "devDependencies": {},
+    "keywords": [
+      "react",
+      "react-hooks",
+      "media queries",
+      "routing",
+      "store",
+      "state"
+    ],
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+      "@oriun/use-media": "^1.0.1",
+      "@oriun/use-wevent": "^1.0.1",
+      "@oriun/use-storage": "^1.0.1",
+      "@oriun/use-routing": "^1.0.1",
+      "@oriun/use-feedback": "^1.0.1",
+      "@oriun/use-diff-state": "^1.0.1",
+      "@oriun/use-click-outside": "^1.0.1",
+      "@oriun/use-error-snapshot": "^1.0.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Oriun/hookster.git"
+    },
+    "author": "",
+    "bugs": {
+      "url": "https://github.com/Oriun/hookster/issues"
+    },
+    "homepage": "https://github.com/Oriun/hookster#readme",
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

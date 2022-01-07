@@ -1,10 +1,9 @@
 {
-    "name": "@oriun/use-rror-napshot",
+    "name": "@oriun/use-error-snapshot",
     "version": "1.0.1",
     "main": "useErrorSnapshot.js",
     "license": "MIT",
     "type": "module",
-    "devDependencies": {},
     "keywords": [
       "react",
       "react-hooks",
@@ -16,7 +15,7 @@
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "peerDependencies": {
+    "dependencies": {
       "react": ">=15 || ^0.14.7"
     },
     "repository": {

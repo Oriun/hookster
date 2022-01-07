@@ -4,6 +4,7 @@
   "main": "useClickOutside.js",
   "license": "MIT",
   "type": "module",
+  "types": "./useClickOutside.d.ts",
   "devDependencies": {},
   "keywords": [
     "react",
