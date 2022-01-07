@@ -1,0 +1,34 @@
+{
+    "name": "@oriun/use-wevent",
+    "version": "1.0.1",
+    "main": "useWEvent.js",
+    "license": "MIT",
+    "type": "module",
+    "devDependencies": {},
+    "keywords": [
+      "react",
+      "react-hooks",
+      "media queries",
+      "routing",
+      "store",
+      "state"
+    ],
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "peerDependencies": {
+      "react": ">=15 || ^0.14.7"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Oriun/hookster.git",
+      "directory": "lib/useWEvent"
+    },
+    "author": "",
+    "bugs": {
+      "url": "https://github.com/Oriun/hookster/issues"
+    },
+    "homepage": "https://github.com/Oriun/hookster#readme",
+    "description": ""
+  }
+  

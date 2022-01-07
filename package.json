@@ -3,12 +3,28 @@
   "version": "1.0.11",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {},
+  "keywords": [
+    "react",
+    "react-hooks",
+    "media queries",
+    "routing",
+    "store",
+    "state"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "react": ">=15 || ^0.14.7"
+  "dependencies": {
+    "@oriun/use-media": "^1.0.1",
+    "@oriun/use-wevent": "^1.0.1",
+    "@oriun/use-storage": "^1.0.1",
+    "@oriun/use-routing": "^1.0.1",
+    "@oriun/use-feedback": "^1.0.1",
+    "@oriun/use-diff-state": "^1.0.1",
+    "@oriun/use-click-outside": "^1.0.1",
+    "@oriun/use-error-snapshot": "^1.0.1"
   },
   "repository": {
     "type": "git",
