@@ -7,10 +7,10 @@
   "keywords": [
     "react",
     "react-hooks",
-    "media queries",
-    "routing",
-    "store",
-    "state"
+    "feedback",
+    "ui",
+    "user output",
+    "error box"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
