@@ -1,6 +1,6 @@
 {
   "name": "@oriun/use-feedback",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "useFeedback.js",
   "license": "MIT",
   "type": "module",
@@ -15,8 +15,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": ">=15 || ^0.14.7"
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17",
+    "react-dom": "^16.8.0 || ^17"
   },
   "repository": {
     "type": "git",
