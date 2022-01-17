@@ -1,6 +1,6 @@
 {
   "name": "@oriun/use-click-outside",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "useClickOutside.js",
   "license": "MIT",
   "type": "module",
@@ -17,8 +17,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": ">=15 || ^0.14.7"
+  "peerDependencies": {
+    "react": "^16.9.0 || ^17",
+    "react-dom": "^16.9.0 || ^17"
   },
   "repository": {
     "type": "git",
