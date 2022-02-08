@@ -4,6 +4,7 @@
   "main": "useFeedback.js",
   "license": "MIT",
   "type": "module",
+  "types": "./useFeedback.d.ts",
   "keywords": [
     "react",
     "react-hooks",
