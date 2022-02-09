@@ -1,9 +1,10 @@
 {
   "name": "@oriun/use-media",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "useMedia.js",
   "license": "MIT",
   "type": "module",
+  "types": "./useMedia.d.ts",
   "keywords": [
     "react",
     "react-hooks",
