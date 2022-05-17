@@ -1,9 +1,10 @@
 {
   "name": "@oriun/use-diff-state",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "useDiffState.js",
   "license": "MIT",
   "type": "module",
+  "types": "./useDiffState.d.ts",
   "keywords": [
     "react",
     "react-hooks",
