@@ -1,0 +1,7 @@
+{
+  "name": "@oriun/use-swipe",
+  "version": "1.0.1",
+  "main": "useSwipe.js",
+  "types": "useSwipe.d.ts",
+  "license": "MIT"
+}
