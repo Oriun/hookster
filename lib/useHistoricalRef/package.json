@@ -1,0 +1,7 @@
+{
+  "name": "@oriun/use-historical-ref",
+  "version": "1.0.1",
+  "main": "useHistoricalRef.js",
+  "types": "./useHistoricalRef.d.ts",
+  "license": "MIT"
+}
