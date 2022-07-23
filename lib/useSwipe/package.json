@@ -1,7 +1,25 @@
 {
   "name": "@oriun/use-swipe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "useSwipe.js",
   "types": "useSwipe.d.ts",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "@oriun/use-historical-ref": "^1.0.3",
+    "react": ">=16.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oriun/hookster.git",
+    "directory": "lib/useMedia"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Oriun/hookster/issues"
+  },
+  "homepage": "https://github.com/Oriun/hookster#readme",
+  "description": ""
 }
