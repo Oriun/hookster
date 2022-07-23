@@ -1,0 +1,25 @@
+{
+  "name": "@oriun/use-bounds",
+  "version": "1.0.2",
+  "main": "useBounds.js",
+  "type": "module",
+  "license": "MIT",
+  "types": "./useBounds.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oriun/hookster.git",
+    "directory": "lib/useMedia"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Oriun/hookster/issues"
+  },
+  "homepage": "https://github.com/Oriun/hookster#readme",
+  "description": ""
+}
