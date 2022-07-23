@@ -1,8 +1,9 @@
 {
   "name": "@oriun/use-historical-ref",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "useHistoricalRef.js",
   "types": "./useHistoricalRef.d.ts",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
