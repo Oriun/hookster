@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function <T extends { [key: string]: string | number }>(
+export type Query = { [key: string]: string | number };
+
+export default function <T extends Query, S extends HTMLElement = HTMLElement>(
   queries: T
-): [{ [key in keyof T]: boolean }, React.RefObject<any>];
+): [{ [key in keyof T]: boolean }, React.RefObject<S>];
