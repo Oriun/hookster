@@ -57,4 +57,4 @@ const breakpoints = {
 
 - The hook will only work with pixel-based breakpoints for now.
 - At the first render, all breakpoints will be evaluated as false since the ref is not yet allocated.
-- The queries implement the `min-width`, `max-width`, `min-height`, `max-height` and the `and` keywords
+- The queries implement the `min-width`, `max-width`, `min-height`, `max-height` and the `and` keywords, but doesn't support the `not` or `or` keyword.
