@@ -1,6 +1,6 @@
 {
   "name": "@oriun/use-media",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "useMedia.js",
   "license": "MIT",
   "types": "./useMedia.d.ts",
