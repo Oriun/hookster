@@ -22,7 +22,7 @@ import useMedia from "@oriun/use-media";
 const breakpoints = {
   mobile: "max-width: 450px",
   tablet: "(min-width: 451px) and (max-width: 1024px)",
-  desktop: "min-width: 1025px"
+  desktop: "min-width: 1025px",
 };
 
 const App = () => {
@@ -49,7 +49,21 @@ You can also pass and object with numbers as values to use the `min-width` media
 const breakpoints = {
   mobile: 0, // equivalent to "min-width: 0px"
   tablet: 450, // equivalent to "min-width: 450px"
-  desktop: 1024 // equivalent to "min-width: 1024px"
+  desktop: 1024, // equivalent to "min-width: 1024px"
+};
+```
+
+## Typescript
+
+You need to specify the type of the element you want to track.
+Example with a `div`:
+
+```tsx
+const App: React.FC = () => {
+  const [{ mobile, tablet, desktop }, ref] =
+    useMedia<HTMLDivElement>(breakpoints);
+  // ...
+  return <div ref={ref}>// ...</div>;
 };
 ```
 
